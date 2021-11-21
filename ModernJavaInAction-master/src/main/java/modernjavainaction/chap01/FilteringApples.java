@@ -14,6 +14,16 @@ public class FilteringApples {
         new Apple(120, "red")
     );
 
+    // traditional style
+    // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
+    List<Apple> greenApplesTraditional = filterGreenApples(inventory);
+    System.out.println(greenApplesTraditional);
+
+    // [Apple{color='green', weight=155}]
+    List<Apple> heavyApplesTraditional = filterHeavyApples(inventory);
+    System.out.println(heavyApplesTraditional);
+
+    // Modern Style
     // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
     List<Apple> greenApples = filterApples(inventory, FilteringApples::isGreenApple);
     System.out.println(greenApples);
